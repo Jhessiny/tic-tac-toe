@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stage">
+        <h1>Jogo da Velha</h1>
+        <div class="scoreboard" id="scoreboard">
+            <table>
+                <thead>
+                    <td>Player 1</td>
+                    <td>Player 2</td>
+                </thead>
+                <tr>
+                    <td class="scorePlayer1" id="scorePlayer1">0</td>
+                    <td class="scorePlayer2" id="scorePlayer2">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-box">
+            <form action="">
+                <select name="playMode" id="playMode">
+                    <option value="classic">Classic</option>
+                    <option value="plantsvszombie">Plants vs. Zombies</option>
+                    <option value="supermario">Mario vs. Bowser</option>
+                    <option value="sonic">Sonic vs. Shadow</option>
+                </select>
+                <button type="button" id="newGame" onclick="newMatch()">New Game</button>
+                <button type="button" id="resetScores" onclick="resetGame()">Reset Score</button>
+                
+            </form>
+        </div>
+        <div class="row">
+            <div id="0" class="square no-border-left no-border-top"></div>
+            <div id="1" class="square no-border-top"></div>
+            <div id="2" class="square no-border-right no-border-top"></div>
+        </div>
+        <div class="row">
+            <div id="3" class="square no-border-left"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square no-border-right"></div>
+        </div>
+        <div class="row">
+            <div id="6" class="square no-border-left no-border-bottom"></div>
+            <div id="7" class="square no-border-bottom"></div>
+            <div id="8" class="square no-border-right no-border-bottom"></div>
+        </div>
+      
+    </div>
+    <div>
+        <audio autoplay loop>
+            <source id="gameSong" src="music/Classic.mp3" type="audio/mp3">
+        </audio>   
+    </div>
+  </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/interface.js"></script>
+</body>
+</html>
